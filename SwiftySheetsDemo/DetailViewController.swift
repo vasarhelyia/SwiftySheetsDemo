@@ -8,10 +8,12 @@
 
 import UIKit
 
+class OtherView: UIView { }
+
 class DetailViewController: UIViewController {
 
 	@IBOutlet weak var detailDescriptionLabel: UILabel!
-
+	@IBOutlet weak var otherView: OtherView!
 
 	var detailItem: AnyObject? {
 		didSet {
