@@ -1,1 +1,1 @@
-$color-white: #FFFFFF
+$color-white: @rgb(#FFFFFF)

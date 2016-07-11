@@ -1,21 +1,21 @@
-@import other.style
+@include other.style
 
 DetailViewController {
 	Button {
-		font-color: $color-white,
+		font-color: $color-white
 		font-name: "SystemItalic"
 		font-size: 16
 	}
 
 	OtherView {
 		Label {
-			font-color: #ffff00
+			font-color: @rgb(#ffff00)
 		}
 	}
 }
 
 MasterViewController {
 	Label {
-		font-color: #ffff00
+		font-color: @rgb(#ffff00)
 	}
 }
