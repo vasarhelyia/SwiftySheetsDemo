@@ -1,0 +1,6 @@
+@include test_included.style
+
+Style {
+	property_a : $a
+	property_b : $b
+}

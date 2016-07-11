@@ -20,6 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
 		splitViewController.delegate = self
 
+		let stylesheet = NSBundle.mainBundle().pathForResource("label", ofType: "style");
+		let parser = Parser.instance();
+		var context : ASTContext? = nil;
+		do {
+			try ObjC.catchException {
+				context = parser.parseFile(stylesheet)
+			}
+		} catch {
+			print("An error ocurred: \(error)")
+		}
+		
+		print("Context: \(context)")
+		
 		// necessary without an actual stylesheet
 		let purpleStyle = ButtonStyle(fontColor: UIColor.purpleColor())
 		let yellowStyle = LabelStyle(font: UIFont.italicSystemFontOfSize(16), fontColor: UIColor.yellowColor())
@@ -27,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		UIButton.setButtonStyle(purpleStyle, viewClass: DetailViewController.self)
 		UILabel.setLabelStyle(yellowStyle, viewClass: OtherView.self)
 		UILabel.setLabelStyle(yellowStyle, viewClass: MasterViewController.self)
-
+		
 		return true
 	}
 
