@@ -31,15 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 			print("An error ocurred: \(error)")
 		}
 		
-		print("Context: \(context)")
 		
-		// necessary without an actual stylesheet
-		let purpleStyle = ButtonStyle(fontColor: UIColor.purpleColor())
-		let yellowStyle = LabelStyle(font: UIFont.italicSystemFontOfSize(16), fontColor: UIColor.yellowColor())
+		let styleDef: ASTStyleDefinition = (context?.allStyleDefinitions()[1])! as! ASTStyleDefinition
+		let className = styleDef.name
+		
+		let children = styleDef.children
 
-		UIButton.setButtonStyle(purpleStyle, viewClass: DetailViewController.self)
-		UILabel.setLabelStyle(yellowStyle, viewClass: OtherView.self)
-		UILabel.setLabelStyle(yellowStyle, viewClass: MasterViewController.self)
+		let style = children[0] as! ASTStyleDefinition
+		var yellowStyle = LabelStyle()
+		yellowStyle.fontColor = style.propertyDefinitionWithName("font-color").propertyValue.eval() as? UIColor
+		UILabel.setLabelStyle(yellowStyle, viewClass: NSClassFromString("SwiftySheetsDemo.\(className)").self!)
 		
 		return true
 	}

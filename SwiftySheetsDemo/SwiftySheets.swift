@@ -20,22 +20,27 @@ struct ButtonStyle {
 
 extension UILabel {
 	class func setLabelStyle(style: LabelStyle, viewClass: AnyObject.Type) {
-		guard let font = style.font,
-			let fontColor = style.fontColor else {
-				return
+		if let font = style.font {
+			self.appearanceWhenContainedInInstancesOfClasses([viewClass]).font = font
 		}
-		
-		self.appearanceWhenContainedInInstancesOfClasses([viewClass]).font = font
-		self.appearanceWhenContainedInInstancesOfClasses([viewClass]).textColor = fontColor
+		if let fontColor = style.fontColor {
+			self.appearanceWhenContainedInInstancesOfClasses([viewClass]).textColor = fontColor
+		}
 	}
 }
 
 extension UIButton {
 	class func setButtonStyle(style: ButtonStyle, viewClass: AnyObject.Type) {
-		guard let fontColor = style.fontColor else {
-				return
+		if let fontColor = style.fontColor {
+			self.appearanceWhenContainedInInstancesOfClasses([viewClass]).tintColor = fontColor
 		}
-		
-		self.appearanceWhenContainedInInstancesOfClasses([viewClass]).tintColor = fontColor
 	}
 }
+
+
+
+
+
+
+
+
