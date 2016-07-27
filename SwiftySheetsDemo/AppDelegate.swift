@@ -26,22 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		do {
 			try ObjC.catchException {
 				context = parser.parseFile(stylesheet)
+				StyleProcessor.processContext(context!)
 			}
 		} catch {
 			print("An error ocurred: \(error)")
 		}
-		
-		
-		let styleDef: ASTStyleDefinition = (context?.allStyleDefinitions()[1])! as! ASTStyleDefinition
-		let className = styleDef.name
-		
-		let children = styleDef.children
 
-		let style = children[0] as! ASTStyleDefinition
-		var yellowStyle = LabelStyle()
-		yellowStyle.fontColor = style.propertyDefinitionWithName("font-color").propertyValue.eval() as? UIColor
-		UILabel.setLabelStyle(yellowStyle, viewClass: NSClassFromString("SwiftySheetsDemo.\(className)").self!)
-		
 		return true
 	}
 

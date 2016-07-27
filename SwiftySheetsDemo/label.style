@@ -1,22 +1,23 @@
-@include other.style
+$gray-text: @rgb(#5C5C5C)
+$swifty-orange: @rgb(#FF8935)
 
 DetailViewController {
-	UIButton {
-		font-color-normal: $color-white
-		font-name: "SystemItalic"
-		font-size: 16
+	UILabel {
+		font-color: $gray-text
+		font-name: "Menlo-Regular"
+		font-size: 17
+		text-align: "center"
 	}
 
-	OtherView {
-		UILabel {
-			font-color: @rgb(#ffff00)
-		}
+	UIButton {
+		font-color-normal: $swifty-orange
+		font-name: "Menlo-Bold"
+		font-size: 15
 	}
 }
 
 MasterViewController {
 	UILabel {
-		font-color: @rgb(#ffff00)
+		font-color: $swifty-orange
 	}
 }
-

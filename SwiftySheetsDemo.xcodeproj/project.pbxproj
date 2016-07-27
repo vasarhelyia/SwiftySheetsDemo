@@ -31,13 +31,15 @@
 		3AD564721D3373AB00350C35 /* ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564711D3373AB00350C35 /* ObjC.m */; };
 		3AD564731D337A4900350C35 /* test.style in Resources */ = {isa = PBXBuildFile; fileRef = 3AD564691D3363BE00350C35 /* test.style */; };
 		3AD564741D337A4C00350C35 /* test_included.style in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5646C1D3363D600350C35 /* test_included.style */; };
+		8A4DCA521D46C19C00FF723F /* StyleProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DCA511D46C19C00FF723F /* StyleProcessor.swift */; };
+		8A4DCA541D46C56A00FF723F /* StyleProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DCA531D46C56A00FF723F /* StyleProperties.swift */; };
 		8AC46B471D2921F1009AC048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC46B461D2921F1009AC048 /* AppDelegate.swift */; };
 		8AC46B491D2921F1009AC048 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC46B481D2921F1009AC048 /* MasterViewController.swift */; };
 		8AC46B4B1D2921F1009AC048 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC46B4A1D2921F1009AC048 /* DetailViewController.swift */; };
 		8AC46B4E1D2921F1009AC048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC46B4C1D2921F1009AC048 /* Main.storyboard */; };
 		8AC46B501D2921F1009AC048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC46B4F1D2921F1009AC048 /* Assets.xcassets */; };
 		8AC46B531D2921F1009AC048 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC46B511D2921F1009AC048 /* LaunchScreen.storyboard */; };
-		8AC46B5B1D293826009AC048 /* SwiftySheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC46B5A1D293826009AC048 /* SwiftySheets.swift */; };
+		8AC46B5B1D293826009AC048 /* UIViewStyleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC46B5A1D293826009AC048 /* UIViewStyleExtensions.swift */; };
 		8AC46B5D1D293A3A009AC048 /* label.style in Resources */ = {isa = PBXBuildFile; fileRef = 8AC46B5C1D293A3A009AC048 /* label.style */; };
 		8AF43A741D2AFA3600ECD83B /* other.style in Resources */ = {isa = PBXBuildFile; fileRef = 8AF43A731D2AFA3600ECD83B /* other.style */; };
 /* End PBXBuildFile section */
@@ -96,6 +98,8 @@
 		3AD5646C1D3363D600350C35 /* test_included.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test_included.style; sourceTree = "<group>"; };
 		3AD564701D3373AB00350C35 /* ObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjC.h; sourceTree = "<group>"; };
 		3AD564711D3373AB00350C35 /* ObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjC.m; sourceTree = "<group>"; };
+		8A4DCA511D46C19C00FF723F /* StyleProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleProcessor.swift; path = SwiftySheetsDemo/StyleProcessor.swift; sourceTree = SOURCE_ROOT; };
+		8A4DCA531D46C56A00FF723F /* StyleProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleProperties.swift; sourceTree = "<group>"; };
 		8AC46B431D2921F1009AC048 /* SwiftySheetsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftySheetsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC46B461D2921F1009AC048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AC46B481D2921F1009AC048 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +108,7 @@
 		8AC46B4F1D2921F1009AC048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AC46B521D2921F1009AC048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AC46B541D2921F1009AC048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AC46B5A1D293826009AC048 /* SwiftySheets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftySheets.swift; sourceTree = "<group>"; };
+		8AC46B5A1D293826009AC048 /* UIViewStyleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewStyleExtensions.swift; sourceTree = "<group>"; };
 		8AC46B5C1D293A3A009AC048 /* label.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = label.style; sourceTree = "<group>"; };
 		8AF43A731D2AFA3600ECD83B /* other.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = other.style; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,10 +225,12 @@
 			isa = PBXGroup;
 			children = (
 				3AD4340E1D2F9B23008C4ED5 /* Parser */,
+				8AC46B5A1D293826009AC048 /* UIViewStyleExtensions.swift */,
+				8A4DCA511D46C19C00FF723F /* StyleProcessor.swift */,
+				8A4DCA531D46C56A00FF723F /* StyleProperties.swift */,
 				8AC46B461D2921F1009AC048 /* AppDelegate.swift */,
 				8AC46B481D2921F1009AC048 /* MasterViewController.swift */,
 				8AC46B4A1D2921F1009AC048 /* DetailViewController.swift */,
-				8AC46B5A1D293826009AC048 /* SwiftySheets.swift */,
 				8AC46B5C1D293A3A009AC048 /* label.style */,
 				8AF43A731D2AFA3600ECD83B /* other.style */,
 				8AC46B4C1D2921F1009AC048 /* Main.storyboard */,
@@ -371,8 +377,10 @@
 				3AD5645C1D323AF700350C35 /* ASTAddExpression.m in Sources */,
 				3AD5642F1D30E7CA00350C35 /* ASTNumericLiteral.m in Sources */,
 				3AD564351D30F55E00350C35 /* ASTContext.m in Sources */,
-				8AC46B5B1D293826009AC048 /* SwiftySheets.swift in Sources */,
+				8AC46B5B1D293826009AC048 /* UIViewStyleExtensions.swift in Sources */,
 				3AD564561D321A6900350C35 /* ASTTupleExpression.m in Sources */,
+				8A4DCA541D46C56A00FF723F /* StyleProperties.swift in Sources */,
+				8A4DCA521D46C19C00FF723F /* StyleProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +562,7 @@
 				3AD5644C1D31155500350C35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AC46B3E1D2921F1009AC048 /* Build configuration list for PBXProject "SwiftySheetsDemo" */ = {
 			isa = XCConfigurationList;
