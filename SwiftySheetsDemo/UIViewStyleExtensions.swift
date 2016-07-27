@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@objc class Style: NSObject {
+@objc(SWStyle) class Style: NSObject {
 	var font: UIFont?
 	var fontColor: UIColor?
 	var fontColorAndState: (UIColor, UIControlState)?

@@ -20,14 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
 		splitViewController.delegate = self
 
-		let stylesheet = NSBundle.mainBundle().pathForResource("label", ofType: "style");
-		let parser = Parser.instance();
-		var context : ASTContext? = nil;
 		do {
-			try ObjC.catchException {
-				context = parser.parseFile(stylesheet)
-				StyleProcessor.processContext(context!)
-			}
+			let stylesheet = NSBundle.mainBundle().pathForResource("label", ofType: "style")
+			let context = try SwiftyParser.sharedInstance.parseFile(stylesheet!)
+			
+			StyleProcessor.processContext(context)
 		} catch {
 			print("An error ocurred: \(error)")
 		}

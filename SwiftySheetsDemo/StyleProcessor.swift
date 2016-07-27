@@ -13,11 +13,11 @@ class StyleProcessor {
 	class func processContext(context: ASTContext) {
 		
 		for styleDef in context.allStyleDefinitions() {
-			let parentDef = styleDef as! ASTStyleDefinition
+			let parentDef = styleDef
 			for childDef in styleDef.children {
-				let style = childDef as! ASTStyleDefinition
+				let style = childDef
 				for property in style.properties {
-					let prop = property as! ASTPropertyDefinition
+					let prop = property
 					let name = prop.propertyName
 					let value = prop.propertyValue
 					let viewClass = NSClassFromString(style.name) as! UIView.Type
@@ -30,7 +30,7 @@ class StyleProcessor {
 					switch name {
 					case fontName:
 						if let font = value.eval() as? String {
-							if let size = style.propertyDefinitionWithName(fontSize).propertyValue.eval() as? CGFloat {
+							if let size = style.propertyDefinitionWithName(fontSize)?.propertyValue.eval() as? CGFloat {
 								s.font = UIFont(name: font, size: size)
 							}
 						}

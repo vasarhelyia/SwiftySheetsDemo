@@ -7,30 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AD434101D2F9B41008C4ED5 /* SwiftySheets.l in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4340F1D2F9B41008C4ED5 /* SwiftySheets.l */; };
-		3AD434121D2F9B4F008C4ED5 /* SwiftySheets.y in Sources */ = {isa = PBXBuildFile; fileRef = 3AD434111D2F9B4F008C4ED5 /* SwiftySheets.y */; };
 		3AD564251D2FB6C000350C35 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564241D2FB6C000350C35 /* Parser.m */; };
-		3AD5642F1D30E7CA00350C35 /* ASTNumericLiteral.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5642E1D30E7CA00350C35 /* ASTNumericLiteral.m */; };
-		3AD564321D30F3AB00350C35 /* ASTVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564311D30F3AB00350C35 /* ASTVariable.m */; };
-		3AD564351D30F55E00350C35 /* ASTContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564341D30F55E00350C35 /* ASTContext.m */; };
-		3AD564381D30F6E600350C35 /* ASTStyleDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564371D30F6E600350C35 /* ASTStyleDefinition.m */; };
-		3AD5643B1D3111ED00350C35 /* ASTPropertyDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5643A1D3111ED00350C35 /* ASTPropertyDefinition.m */; };
 		3AD564461D31155500350C35 /* SwiftySheetsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564451D31155500350C35 /* SwiftySheetsDemoTests.swift */; };
 		3AD5644D1D31155E00350C35 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5643D1D31153600350C35 /* ParserTests.swift */; };
-		3AD564501D316AB500350C35 /* ASTStringLiteral.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5644F1D316AB500350C35 /* ASTStringLiteral.m */; };
-		3AD564531D32145900350C35 /* ASTExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564521D32145900350C35 /* ASTExpression.m */; };
-		3AD564561D321A6900350C35 /* ASTTupleExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564551D321A6900350C35 /* ASTTupleExpression.m */; };
-		3AD564591D3239F500350C35 /* ASTUnaryMinusExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564581D3239F500350C35 /* ASTUnaryMinusExpression.m */; };
-		3AD5645C1D323AF700350C35 /* ASTAddExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5645B1D323AF700350C35 /* ASTAddExpression.m */; };
-		3AD5645F1D323BE800350C35 /* ASTSubExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5645E1D323BE800350C35 /* ASTSubExpression.m */; };
-		3AD564621D323C2B00350C35 /* ASTMulExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564611D323C2B00350C35 /* ASTMulExpression.m */; };
-		3AD564651D323C4300350C35 /* ASTDivExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564641D323C4300350C35 /* ASTDivExpression.m */; };
-		3AD564681D32B9B300350C35 /* ASTColorExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564671D32B9B300350C35 /* ASTColorExpression.m */; };
 		3AD5646E1D33658F00350C35 /* test.style in Resources */ = {isa = PBXBuildFile; fileRef = 3AD564691D3363BE00350C35 /* test.style */; };
 		3AD5646F1D33659200350C35 /* test_included.style in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5646C1D3363D600350C35 /* test_included.style */; };
-		3AD564721D3373AB00350C35 /* ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD564711D3373AB00350C35 /* ObjC.m */; };
 		3AD564731D337A4900350C35 /* test.style in Resources */ = {isa = PBXBuildFile; fileRef = 3AD564691D3363BE00350C35 /* test.style */; };
 		3AD564741D337A4C00350C35 /* test_included.style in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5646C1D3363D600350C35 /* test_included.style */; };
+		88AB9C171D495E8C007C6152 /* SwiftyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C141D495E8C007C6152 /* SwiftyParser.swift */; };
+		88AB9C181D495E8C007C6152 /* SwiftySheets.lm in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C151D495E8C007C6152 /* SwiftySheets.lm */; };
+		88AB9C191D495E8C007C6152 /* SwiftySheets.ym in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C161D495E8C007C6152 /* SwiftySheets.ym */; };
+		88AB9C231D495EAA007C6152 /* ASTColorExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C1A1D495EAA007C6152 /* ASTColorExpression.swift */; };
+		88AB9C241D495EAA007C6152 /* ASTContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C1B1D495EAA007C6152 /* ASTContext.swift */; };
+		88AB9C251D495EAA007C6152 /* ASTExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C1C1D495EAA007C6152 /* ASTExpression.swift */; };
+		88AB9C261D495EAA007C6152 /* ASTNumericLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C1D1D495EAA007C6152 /* ASTNumericLiteral.swift */; };
+		88AB9C271D495EAA007C6152 /* ASTOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C1E1D495EAA007C6152 /* ASTOperations.swift */; };
+		88AB9C281D495EAA007C6152 /* ASTPropertyDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C1F1D495EAA007C6152 /* ASTPropertyDefinition.swift */; };
+		88AB9C291D495EAA007C6152 /* ASTStringLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C201D495EAA007C6152 /* ASTStringLiteral.swift */; };
+		88AB9C2A1D495EAA007C6152 /* ASTStyleDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C211D495EAA007C6152 /* ASTStyleDefinition.swift */; };
+		88AB9C2B1D495EAA007C6152 /* ASTVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9C221D495EAA007C6152 /* ASTVariable.swift */; };
 		8A4DCA521D46C19C00FF723F /* StyleProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DCA511D46C19C00FF723F /* StyleProcessor.swift */; };
 		8A4DCA541D46C56A00FF723F /* StyleProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DCA531D46C56A00FF723F /* StyleProperties.swift */; };
 		8AC46B471D2921F1009AC048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC46B461D2921F1009AC048 /* AppDelegate.swift */; };
@@ -55,49 +50,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3AD4340F1D2F9B41008C4ED5 /* SwiftySheets.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = SwiftySheets.l; sourceTree = "<group>"; };
-		3AD434111D2F9B4F008C4ED5 /* SwiftySheets.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = SwiftySheets.y; sourceTree = "<group>"; };
 		3AD564211D2FB64000350C35 /* SwiftySheets.tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftySheets.tab.h; sourceTree = "<group>"; };
 		3AD564221D2FB6C000350C35 /* SwiftySheetsDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftySheetsDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		3AD564231D2FB6C000350C35 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		3AD564241D2FB6C000350C35 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		3AD5642C1D30E72800350C35 /* AST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AST.h; sourceTree = "<group>"; };
-		3AD5642D1D30E7CA00350C35 /* ASTNumericLiteral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTNumericLiteral.h; sourceTree = "<group>"; };
-		3AD5642E1D30E7CA00350C35 /* ASTNumericLiteral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTNumericLiteral.m; sourceTree = "<group>"; };
-		3AD564301D30F3AB00350C35 /* ASTVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTVariable.h; sourceTree = "<group>"; };
-		3AD564311D30F3AB00350C35 /* ASTVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTVariable.m; sourceTree = "<group>"; };
-		3AD564331D30F55E00350C35 /* ASTContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTContext.h; sourceTree = "<group>"; };
-		3AD564341D30F55E00350C35 /* ASTContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTContext.m; sourceTree = "<group>"; };
-		3AD564361D30F6E600350C35 /* ASTStyleDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTStyleDefinition.h; sourceTree = "<group>"; };
-		3AD564371D30F6E600350C35 /* ASTStyleDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTStyleDefinition.m; sourceTree = "<group>"; };
-		3AD564391D3111ED00350C35 /* ASTPropertyDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTPropertyDefinition.h; sourceTree = "<group>"; };
-		3AD5643A1D3111ED00350C35 /* ASTPropertyDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTPropertyDefinition.m; sourceTree = "<group>"; };
 		3AD5643D1D31153600350C35 /* ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 		3AD564431D31155500350C35 /* SwiftySheetsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftySheetsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD564451D31155500350C35 /* SwiftySheetsDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySheetsDemoTests.swift; sourceTree = "<group>"; };
 		3AD564471D31155500350C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AD5644E1D316AB500350C35 /* ASTStringLiteral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTStringLiteral.h; sourceTree = "<group>"; };
-		3AD5644F1D316AB500350C35 /* ASTStringLiteral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTStringLiteral.m; sourceTree = "<group>"; };
-		3AD564511D32145900350C35 /* ASTExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTExpression.h; sourceTree = "<group>"; };
-		3AD564521D32145900350C35 /* ASTExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTExpression.m; sourceTree = "<group>"; };
-		3AD564541D321A6900350C35 /* ASTTupleExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTTupleExpression.h; sourceTree = "<group>"; };
-		3AD564551D321A6900350C35 /* ASTTupleExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTTupleExpression.m; sourceTree = "<group>"; };
-		3AD564571D3239F500350C35 /* ASTUnaryMinusExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTUnaryMinusExpression.h; sourceTree = "<group>"; };
-		3AD564581D3239F500350C35 /* ASTUnaryMinusExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTUnaryMinusExpression.m; sourceTree = "<group>"; };
-		3AD5645A1D323AF700350C35 /* ASTAddExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTAddExpression.h; sourceTree = "<group>"; };
-		3AD5645B1D323AF700350C35 /* ASTAddExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTAddExpression.m; sourceTree = "<group>"; };
-		3AD5645D1D323BE800350C35 /* ASTSubExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTSubExpression.h; sourceTree = "<group>"; };
-		3AD5645E1D323BE800350C35 /* ASTSubExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTSubExpression.m; sourceTree = "<group>"; };
-		3AD564601D323C2B00350C35 /* ASTMulExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTMulExpression.h; sourceTree = "<group>"; };
-		3AD564611D323C2B00350C35 /* ASTMulExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTMulExpression.m; sourceTree = "<group>"; };
-		3AD564631D323C4300350C35 /* ASTDivExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTDivExpression.h; sourceTree = "<group>"; };
-		3AD564641D323C4300350C35 /* ASTDivExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTDivExpression.m; sourceTree = "<group>"; };
-		3AD564661D32B9B300350C35 /* ASTColorExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTColorExpression.h; sourceTree = "<group>"; };
-		3AD564671D32B9B300350C35 /* ASTColorExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTColorExpression.m; sourceTree = "<group>"; };
 		3AD564691D3363BE00350C35 /* test.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.style; sourceTree = "<group>"; };
 		3AD5646C1D3363D600350C35 /* test_included.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test_included.style; sourceTree = "<group>"; };
-		3AD564701D3373AB00350C35 /* ObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjC.h; sourceTree = "<group>"; };
-		3AD564711D3373AB00350C35 /* ObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjC.m; sourceTree = "<group>"; };
+		88AB9C141D495E8C007C6152 /* SwiftyParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyParser.swift; sourceTree = "<group>"; };
+		88AB9C151D495E8C007C6152 /* SwiftySheets.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = SwiftySheets.lm; sourceTree = "<group>"; };
+		88AB9C161D495E8C007C6152 /* SwiftySheets.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = SwiftySheets.ym; sourceTree = "<group>"; };
+		88AB9C1A1D495EAA007C6152 /* ASTColorExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTColorExpression.swift; sourceTree = "<group>"; };
+		88AB9C1B1D495EAA007C6152 /* ASTContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTContext.swift; sourceTree = "<group>"; };
+		88AB9C1C1D495EAA007C6152 /* ASTExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTExpression.swift; sourceTree = "<group>"; };
+		88AB9C1D1D495EAA007C6152 /* ASTNumericLiteral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTNumericLiteral.swift; sourceTree = "<group>"; };
+		88AB9C1E1D495EAA007C6152 /* ASTOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTOperations.swift; sourceTree = "<group>"; };
+		88AB9C1F1D495EAA007C6152 /* ASTPropertyDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTPropertyDefinition.swift; sourceTree = "<group>"; };
+		88AB9C201D495EAA007C6152 /* ASTStringLiteral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTStringLiteral.swift; sourceTree = "<group>"; };
+		88AB9C211D495EAA007C6152 /* ASTStyleDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTStyleDefinition.swift; sourceTree = "<group>"; };
+		88AB9C221D495EAA007C6152 /* ASTVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTVariable.swift; sourceTree = "<group>"; };
 		8A4DCA511D46C19C00FF723F /* StyleProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleProcessor.swift; path = SwiftySheetsDemo/StyleProcessor.swift; sourceTree = SOURCE_ROOT; };
 		8A4DCA531D46C56A00FF723F /* StyleProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleProperties.swift; sourceTree = "<group>"; };
 		8AC46B431D2921F1009AC048 /* SwiftySheetsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftySheetsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,13 +112,12 @@
 				3AD5643C1D3114FB00350C35 /* Tests */,
 				3AD5642B1D30E70C00350C35 /* AST */,
 				3AD564211D2FB64000350C35 /* SwiftySheets.tab.h */,
-				3AD4340F1D2F9B41008C4ED5 /* SwiftySheets.l */,
-				3AD434111D2F9B4F008C4ED5 /* SwiftySheets.y */,
+				88AB9C151D495E8C007C6152 /* SwiftySheets.lm */,
+				88AB9C161D495E8C007C6152 /* SwiftySheets.ym */,
 				3AD564231D2FB6C000350C35 /* Parser.h */,
 				3AD564241D2FB6C000350C35 /* Parser.m */,
+				88AB9C141D495E8C007C6152 /* SwiftyParser.swift */,
 				3AD564221D2FB6C000350C35 /* SwiftySheetsDemo-Bridging-Header.h */,
-				3AD564701D3373AB00350C35 /* ObjC.h */,
-				3AD564711D3373AB00350C35 /* ObjC.m */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -152,34 +126,15 @@
 			isa = PBXGroup;
 			children = (
 				3AD5642C1D30E72800350C35 /* AST.h */,
-				3AD564511D32145900350C35 /* ASTExpression.h */,
-				3AD564521D32145900350C35 /* ASTExpression.m */,
-				3AD5642D1D30E7CA00350C35 /* ASTNumericLiteral.h */,
-				3AD5642E1D30E7CA00350C35 /* ASTNumericLiteral.m */,
-				3AD5644E1D316AB500350C35 /* ASTStringLiteral.h */,
-				3AD5644F1D316AB500350C35 /* ASTStringLiteral.m */,
-				3AD564541D321A6900350C35 /* ASTTupleExpression.h */,
-				3AD564551D321A6900350C35 /* ASTTupleExpression.m */,
-				3AD564301D30F3AB00350C35 /* ASTVariable.h */,
-				3AD564311D30F3AB00350C35 /* ASTVariable.m */,
-				3AD564331D30F55E00350C35 /* ASTContext.h */,
-				3AD564341D30F55E00350C35 /* ASTContext.m */,
-				3AD564361D30F6E600350C35 /* ASTStyleDefinition.h */,
-				3AD564371D30F6E600350C35 /* ASTStyleDefinition.m */,
-				3AD564391D3111ED00350C35 /* ASTPropertyDefinition.h */,
-				3AD5643A1D3111ED00350C35 /* ASTPropertyDefinition.m */,
-				3AD564571D3239F500350C35 /* ASTUnaryMinusExpression.h */,
-				3AD564581D3239F500350C35 /* ASTUnaryMinusExpression.m */,
-				3AD5645A1D323AF700350C35 /* ASTAddExpression.h */,
-				3AD5645B1D323AF700350C35 /* ASTAddExpression.m */,
-				3AD5645D1D323BE800350C35 /* ASTSubExpression.h */,
-				3AD5645E1D323BE800350C35 /* ASTSubExpression.m */,
-				3AD564601D323C2B00350C35 /* ASTMulExpression.h */,
-				3AD564611D323C2B00350C35 /* ASTMulExpression.m */,
-				3AD564631D323C4300350C35 /* ASTDivExpression.h */,
-				3AD564641D323C4300350C35 /* ASTDivExpression.m */,
-				3AD564661D32B9B300350C35 /* ASTColorExpression.h */,
-				3AD564671D32B9B300350C35 /* ASTColorExpression.m */,
+				88AB9C1A1D495EAA007C6152 /* ASTColorExpression.swift */,
+				88AB9C1B1D495EAA007C6152 /* ASTContext.swift */,
+				88AB9C1C1D495EAA007C6152 /* ASTExpression.swift */,
+				88AB9C1D1D495EAA007C6152 /* ASTNumericLiteral.swift */,
+				88AB9C1E1D495EAA007C6152 /* ASTOperations.swift */,
+				88AB9C1F1D495EAA007C6152 /* ASTPropertyDefinition.swift */,
+				88AB9C201D495EAA007C6152 /* ASTStringLiteral.swift */,
+				88AB9C211D495EAA007C6152 /* ASTStyleDefinition.swift */,
+				88AB9C221D495EAA007C6152 /* ASTVariable.swift */,
 			);
 			path = AST;
 			sourceTree = "<group>";
@@ -357,30 +312,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AD5643B1D3111ED00350C35 /* ASTPropertyDefinition.m in Sources */,
+				88AB9C231D495EAA007C6152 /* ASTColorExpression.swift in Sources */,
+				88AB9C271D495EAA007C6152 /* ASTOperations.swift in Sources */,
 				8AC46B4B1D2921F1009AC048 /* DetailViewController.swift in Sources */,
-				3AD434121D2F9B4F008C4ED5 /* SwiftySheets.y in Sources */,
-				3AD564621D323C2B00350C35 /* ASTMulExpression.m in Sources */,
-				3AD5645F1D323BE800350C35 /* ASTSubExpression.m in Sources */,
-				3AD564501D316AB500350C35 /* ASTStringLiteral.m in Sources */,
-				3AD564381D30F6E600350C35 /* ASTStyleDefinition.m in Sources */,
+				88AB9C291D495EAA007C6152 /* ASTStringLiteral.swift in Sources */,
+				88AB9C2B1D495EAA007C6152 /* ASTVariable.swift in Sources */,
+				88AB9C191D495E8C007C6152 /* SwiftySheets.ym in Sources */,
+				88AB9C2A1D495EAA007C6152 /* ASTStyleDefinition.swift in Sources */,
 				8AC46B491D2921F1009AC048 /* MasterViewController.swift in Sources */,
-				3AD564681D32B9B300350C35 /* ASTColorExpression.m in Sources */,
-				3AD564321D30F3AB00350C35 /* ASTVariable.m in Sources */,
-				3AD564591D3239F500350C35 /* ASTUnaryMinusExpression.m in Sources */,
-				3AD564721D3373AB00350C35 /* ObjC.m in Sources */,
+				88AB9C261D495EAA007C6152 /* ASTNumericLiteral.swift in Sources */,
+				88AB9C181D495E8C007C6152 /* SwiftySheets.lm in Sources */,
 				8AC46B471D2921F1009AC048 /* AppDelegate.swift in Sources */,
-				3AD434101D2F9B41008C4ED5 /* SwiftySheets.l in Sources */,
-				3AD564651D323C4300350C35 /* ASTDivExpression.m in Sources */,
 				3AD564251D2FB6C000350C35 /* Parser.m in Sources */,
-				3AD564531D32145900350C35 /* ASTExpression.m in Sources */,
-				3AD5645C1D323AF700350C35 /* ASTAddExpression.m in Sources */,
-				3AD5642F1D30E7CA00350C35 /* ASTNumericLiteral.m in Sources */,
-				3AD564351D30F55E00350C35 /* ASTContext.m in Sources */,
+				88AB9C171D495E8C007C6152 /* SwiftyParser.swift in Sources */,
+				88AB9C241D495EAA007C6152 /* ASTContext.swift in Sources */,
 				8AC46B5B1D293826009AC048 /* UIViewStyleExtensions.swift in Sources */,
-				3AD564561D321A6900350C35 /* ASTTupleExpression.m in Sources */,
+				88AB9C281D495EAA007C6152 /* ASTPropertyDefinition.swift in Sources */,
 				8A4DCA541D46C56A00FF723F /* StyleProperties.swift in Sources */,
 				8A4DCA521D46C19C00FF723F /* StyleProcessor.swift in Sources */,
+				88AB9C251D495EAA007C6152 /* ASTExpression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +480,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = SwiftySheetsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.SwiftySheetsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,6 +496,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = SwiftySheetsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.SwiftySheetsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
