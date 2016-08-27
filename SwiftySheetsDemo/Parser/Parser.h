@@ -7,13 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AST/ASTContext.h"
 
 @interface Parser : NSObject
 
-+ (Parser *)instance;
-
-- (ASTContext *)parseFile:(NSString *)path;
-- (ASTContext *)parseString:(NSString *)string;
++ (void)startWithFileDescriptor:(int)fileDescriptor;
++ (void)scanString:(NSString *)string;
 
 @end

@@ -1,0 +1,111 @@
+%{
+	#import <stdio.h>
+	#include "AST.h"
+	#import "SwiftySheetsDemo-Swift.h"
+	
+	extern void yyerror(const char *);
+	extern int yylex(), yyparse(), yy_scan_string(const char *);
+	
+	#define YYERROR_VERBOSE 1
+	#define YYDEBUG 1
+%}
+
+
+%token TK_IDENTIFIER
+%token TK_VARIABLE
+%token TK_STRING_LITERAL
+%token TK_DECIMAL_LITERAL
+%token TK_HEXA_LITERAL
+%token TK_RGB
+%token TK_RGBA
+
+%left '+' '-'
+%left '*' '/'
+%left NEG
+
+%start style_collection
+
+%union {
+	int		intval;
+	ASTStr	strval;
+	ASTRef	refval;
+}
+
+%%
+
+style_collection
+	: 
+	| style_collection style_statement								{ [SwiftyParser AST_styledef_register:(__bridge id<ASTExpression>)$<refval>2]; }
+	;
+
+style_statement
+	: style_definition												{ $<refval>$ = $<refval>1; }
+	| variable_definition											{ $<refval>$ = $<refval>1; }
+	;
+
+style_definition
+	: TK_IDENTIFIER '{' style_definition_elements '}'				{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_styledef_create:@($<strval>1) elements:(__bridge NSArray<ASTStyleDefinition *> *)$<refval>3]; }
+	;
+
+style_definition_elements
+	:																{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_styleelements_create]; }
+	| style_definition_elements style_definition_element			{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_styleelements_append:(__bridge NSArray<ASTStyleDefinition *> *)$<refval>1 element:(__bridge ASTStyleDefinition *)$<refval>2]; }
+	;
+
+style_definition_element
+	: style_definition												{ $<refval>$ = $<refval>1; }
+	| property_definition											{ $<refval>$ = $<refval>1; }
+	;
+
+property_definition
+	: TK_IDENTIFIER ':' expr										{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_property_create:@($<strval>1) value:(__bridge id<ASTExpression>)$<refval>3]; }
+	;
+
+variable_definition
+	: '$' TK_IDENTIFIER ':' expr									{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_variable_declare:@($<strval>2) value:(__bridge id<ASTExpression>)$<refval>4]; }
+
+expr
+	: TK_DECIMAL_LITERAL											{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_literal_create_fom_dec:@($<strval>1)]; }
+	| TK_HEXA_LITERAL												{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_literal_create_fom_hex:@($<strval>1)]; }
+	| TK_STRING_LITERAL												{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_literal_create_fom_str:@($<strval>1)]; }
+	| variable														{ $<refval>$ = $<refval>1; }
+//	| tuple															{ $<refval>$ = $<refval>1; }
+	| rgba															{ $<refval>$ = $<refval>1; }
+	| rgb															{ $<refval>$ = $<refval>1; }
+	| '(' expr ')'													{ $<refval>$ = $<refval>2; }
+	| '-' expr	%prec NEG											{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_expr_minus:(__bridge id<ASTExpression>)$<refval>2]; }
+	| expr '+' expr													{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_expr_add_left:(__bridge id<ASTExpression>)$<refval>1 right:(__bridge id<ASTExpression>)$<refval>3]; }
+	| expr '-' expr													{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_expr_sub_left:(__bridge id<ASTExpression>)$<refval>1 right:(__bridge id<ASTExpression>)$<refval>3]; }
+	| expr '*' expr													{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_expr_mul_left:(__bridge id<ASTExpression>)$<refval>1 right:(__bridge id<ASTExpression>)$<refval>3]; }
+	| expr '/' expr													{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_expr_div_left:(__bridge id<ASTExpression>)$<refval>1 right:(__bridge id<ASTExpression>)$<refval>3]; }
+;
+
+variable
+	: '$' TK_IDENTIFIER												{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_variable_get:@($<strval>2)]; }
+;
+
+//tuple
+//	: '(' expr_list ')'												{ $<refval>$ = AST_tuple_create($<strval>2); }
+//	;
+
+expr_list
+	: expr ',' expr													{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_exprlist_create:(__bridge id<SwiftyASTExpression>)$<refval>1 right:(__bridge id<SwiftyASTExpression>)$<refval>3]; }
+	| expr_list ',' expr											{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_exprlist_append:(__bridge NSArray<id<SwiftyASTExpression>> *)$<refval>1 element:(__bridge id<SwiftyASTExpression>)$<refval>3]; }
+	;
+
+rgb
+	: TK_RGB '(' expr ',' expr ',' expr ')'							{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_color_create_from_r:(__bridge id<ASTExpression>)$<refval>3 g:(__bridge id<ASTExpression>)$<refval>5 b:(__bridge id<ASTExpression>)$<refval>7]; }
+	| TK_RGB '(' expr ')'											{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_color_create_from_packed_rgb:(__bridge id<ASTExpression>)$<refval>3]; }
+
+rgba
+	: TK_RGBA '(' expr ',' expr ',' expr ',' expr ')'				{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_color_create_from_r:(__bridge id<ASTExpression>)$<refval>3 g:(__bridge id<ASTExpression>)$<refval>5 b:(__bridge id<ASTExpression>)$<refval>7 a:(__bridge id<ASTExpression>)$<refval>9]; }
+	| TK_RGBA '(' expr ')'											{ $<refval>$ = (__bridge ASTRef)[SwiftyParser AST_color_create_from_packed_rgba:(__bridge id<ASTExpression>)$<refval>3]; }
+
+%%
+
+#include <stdio.h>
+
+void yyerror(const char *s)
+{
+	[SwiftyParser AST_handle_error:@(s)];
+}

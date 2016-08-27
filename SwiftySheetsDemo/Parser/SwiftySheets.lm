@@ -1,6 +1,7 @@
 %{
 	#include "AST.h"
 	#import "SwiftySheets.tab.h"
+	#import "SwiftySheetsDemo-Swift.h"
 	
 	void count();
 	char *unescaped_string(char *str);
@@ -20,17 +21,17 @@ LETTER		[a-zA-Z_]
 "@include"						{ count(); BEGIN(INCLUDE); }
 <INCLUDE>[ \t]*      /* eat the whitespace */
 <INCLUDE>[^ \t\n]+   { /* got the include file name */
-	const char* file = AST_resolve_path(yytext);
+	const char *file = (const char *)[SwiftyParser AST_resolve_path:@(yytext)];
 	yyin = fopen( file, "r" );
 	
 	if ( ! yyin ) {
 		BEGIN(INITIAL);
-		AST_handle_error( "Could not open file" );
+		[SwiftyParser AST_handle_error:@"Could not open file"];
 		yyterminate();
 	}
 	
 	yypush_buffer_state(yy_create_buffer( yyin, YY_BUF_SIZE ));
-	AST_push_state(file);
+	[SwiftyParser AST_push_state:@(file)];
 	
 	BEGIN(INITIAL);
 }
@@ -48,7 +49,7 @@ LETTER		[a-zA-Z_]
 <<EOF>> {
 	BEGIN(INITIAL);
 	
-	AST_pop_state();
+	[SwiftyParser AST_pop_state];
 	yypop_buffer_state();
 	
 	if ( !YY_CURRENT_BUFFER )
