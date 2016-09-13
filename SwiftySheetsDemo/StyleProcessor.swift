@@ -53,5 +53,36 @@ class StyleProcessor {
 			}
 		}
 	}
-
+	
+	func styleForProperty(property: ASTPropertyDefinition?) -> (String, Style) {
+		let s = Style()
+		guard let prop = property else {
+			return ("",Style())
+		}
+		let name = prop.propertyName
+		let value = prop.propertyValue
+		
+		switch name {
+		case fontName:
+			if let font = value.eval() as? String {
+				s.font = UIFont(name: font, size: 16)
+			}
+		case fontSize:
+			if let size = value.eval() as? CGFloat {
+				s.font = s.font?.fontWithSize(size)
+			}
+		case fontColor:
+			if let fontColor = value.eval() as? UIColor {
+				s.fontColor = fontColor
+			}
+		case fontColorNormal:
+			if let fontColor = value.eval() as? UIColor {
+				s.fontColorAndState = (fontColor, .Normal)
+			}
+		default:
+			break
+		}
+		
+		return (name, s)
+	}
 }
